@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logopic {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.logopic img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.logopic .logo-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0a0a0a;
+}
+
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul li {
+    list-style-type: none;
+    margin: 0 15px;
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000;
+    padding-bottom: 5px;
+    transition: border-bottom 0.3s ease;
+}
+
+.nav-menu .link:hover {
+    border-bottom: 2px solid #000000;
+    
+}
+.current-page {
+    border-bottom: solid 2px black;
+}
+
+
+
+
+
+
+
+.nav-button .btn {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(40, 39, 39, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: rgba(40, 39, 39, 0.756);
+}
+
+
+#registerBtn {
+    margin-left: 15px;
+}
+
+.btn.white-btn {
+    background: rgb(0, 0, 0);
+    color: aliceblue;
+}
+
+.btn.white-btn:hover {
+    background: rgba(48, 48, 48, 0.539);
+}
+
+.quizBackground-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 300px; /* Add margin to push content down */
+}
+
+.quiz-container {
+    margin-top: 50px; /* Adjust as needed */
+    text-align: left;
+}
+
+.results-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e0e0e02a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#quizResults {
+    color: rgb(15, 15, 15);
+    text-align: center;
+    font-family: "Papyrus", fantasy;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#totalMarks {
+    color: rgb(15, 15, 15);
+    text-align: center;
+    font-family: "Papyrus", fantasy;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#results {
+    color: rgb(15, 15, 15);
+    text-align: center;
+    font-family: "Papyrus", fantasy;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p {
+    color: rgb(15, 15, 15);
+}
+
+span {
+    color: rgb(26, 18, 192);
+}
+
+#quizMessage {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#quizButton {
+    background-color: #d4af37;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 20px auto;
+    
+}
+
+#quizButton:hover {
+    background-color: #c69e32;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#quizButton:active {
+    background-color: #b38b2b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding-top: 350px;
+    color: #0f0f0f;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer p {
+    color: black;
+    margin: 5px 0;
+}
+
+footer a {
+    color: #050505;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.section-link {
+    color: rgb(7, 7, 7);
+}

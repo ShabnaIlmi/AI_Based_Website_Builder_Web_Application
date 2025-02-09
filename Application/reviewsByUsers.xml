@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reviews>
+    <review>
+        <name>Noah Smith</name>
+        <stars>5</stars>
+        <comment>I love the modern design of this webpage! The layout is so clean and easy to navigate. The content is also very informative and engaging</comment>
+        <date>15-06-2023</date>
+    </review>
+    <review>
+        <name>Emily Dickinson</name>
+        <stars>4</stars>
+        <comment>I was impressed by the loading speed of this webpage. It's so fast and responsive! The images are also high-quality and relevant to the content</comment>
+        <date>29-06-2024</date>
+    </review>
+    <review>
+        <name>Divya Patel</name>
+        <stars>4</stars>
+        <comment>I appreciate the attention to detail on this webpage. The typography is beautiful and the color scheme is so cohesive. The call-to-actions are also very clear and prominent.</comment>
+        <date>23-10-2023</date>
+    </review>
+</reviews>

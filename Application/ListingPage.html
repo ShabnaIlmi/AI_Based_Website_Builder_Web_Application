@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transparent Box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ListingPageStyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="review-box">
+            <h1>Customer Reviews</h1>
+            <div class="star-rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star unchecked"></span>
+            </div>
+            <p></p>
+            <div class="reviews-container">
+                <div class="box">
+                    <img src="images/ListingPageprofpic1.png" alt="profPic">
+                </div>
+                <div class="box">
+                    <img src="images/ListingPageprofpic2.jpg" alt="profPic">
+                </div> 
+                <div class="box">
+                    <img src="images/ListingPageprofpic3.png" alt="profPic">
+                </div>
+            </div>
+            <div class="arrow left-arrow">&#10094;</div> 
+            <div class="arrow right-arrow">&#10095;</div>
+        </div>
+
+        <div class="dropdown dropdown-background">
+            <button class="dropbtn">
+                <img src="images/ListingPagebackColChange.png" alt="paint" class="backgroundColour">
+            </button>
+            <div class="dropdown-content">
+                <a href="#" style="color: peachpuff;" onclick="changeBackgroundColor('peachpuff')">Peech</a>
+                <a href="#" onclick="changeBackgroundColor('turquoise')" style="color: turquoise;">Turquoise</a>
+                <a href="#" style="color: greenyellow;" onclick="changeBackgroundColor('chartreuse')">Green</a>
+                <a href="#" style="color: plum;" onclick="changeBackgroundColor('plum')">Purple</a>
+                <a href="#" style="color: palevioletred;" onclick="changeBackgroundColor('palevioletred')">Pink</a>
+                <a href="#" onclick="changeBackgroundColor('white')">White</a>
+            </div>
+        </div>
+
+        <div class="dropdown dropdown-text">
+            <button class="dropbtn">
+                <img src="images/ListingPagetextColChange.png" alt="text" class="textColour">
+            </button>
+            <div class="dropdown-content">
+                <a href="#" style="color: red;" onclick="changeTextColor('red')">Red</a>
+                <a href="#" onclick="changeTextColor('black')">Black</a>
+                <a href="#" style="color: blue;" onclick="changeTextColor('blue')">Blue</a>
+                <a href="#" style="color: green;" onclick="changeTextColor('green')">Green</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container_2">
+        <div class="subscription-box">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>To be updated with all the latest Templates</p>
+            <form action="#" method="POST" id="subscription-form">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Your email address" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">I agree with Privacy Policy</label>
+                </div>
+                <button type="submit" id="Subscribe">SUBSCRIBE</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        
+        function changeBackgroundColor(color) {
+            document.querySelector('.container').style.backgroundColor = color;
+        }
+
+        function changeTextColor(color) {
+            document.querySelector('.review-box').style.color = color;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'reviewsByUsers.xml', true);
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xhr.responseText, "application/xml");
+                    const reviews = xmlDoc.getElementsByTagName("review");
+                    const boxes = document.querySelectorAll(".box");
+
+                    for (let i = 0; i < reviews.length; i++) {
+                        const review = reviews[i];
+                        const name = review.getElementsByTagName("name")[0].textContent;
+                        const stars = review.getElementsByTagName("stars")[0].textContent;
+                        const comment = review.getElementsByTagName("comment")[0].textContent;
+                        const date = review.getElementsByTagName("date")[0].textContent;
+
+                        const reviewElement = document.createElement("div");
+                        reviewElement.innerHTML = `
+                            <h2>${name}</h2>
+                            <div class="stars">
+                                ${"★".repeat(stars)}
+                                <span class="uncolored">${"★".repeat(5-stars)}</span>
+                            </div>
+                            <p>${comment}</p>
+                            <p>${date}</p>
+                            `;
+
+                        boxes[i].appendChild(reviewElement);
+                    }
+                } else {
+                    console.error("Failed to load XML file");
+                }
+            };
+            xhr.send();
+        });
+
+        document.getElementById("subscription-form").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            const name = event.target.name.value;
+            // Display a success prompt box
+            alert(`Dear ${name}, you have successfully subscribed for a personalized newsletter!`);
+
+            event.target.reset();
+        });
+    </script>
+      <footer>
+        <div class="footer-content">
+          <img src="images/FooterLogo.png" alt="CreateME Logo" class="footer-logo">
+          <p>CreateME</p>
+          <p>Copyright © 2024 All rights reserved</p>
+          <p>Powered By <a href="https://www.CreateME.com">CreateME</a> - <a href="https://www.CreateME.com">Make your own website</a></p>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="mainWebPage.html">Home</a>
+          <a href="ProductPage.html">Shop</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="quizPage.html">Quiz</a>
+          <a href="AboutUs.html">About Us</a>
+          <a href="ListingPage.html">Reviews</a>
+        </nav>
+        <a href="Gagani.html">Page Editor</a>
+      </footer>
+    </body>
+    </html>

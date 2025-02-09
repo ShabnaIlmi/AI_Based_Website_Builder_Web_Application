@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="css/mainWebPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="javascript/mainWebPage.js"></script>
+    <title>CreateME | Home</title>
+    <link rel="icon" type="image/x-icon" href="images/Favicon.png">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="logopic">
+                <img src="images/Logo.png" alt="Logo">
+                <span class="logo-text">CreateME</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="mainWebPage.html" class="link">Home</a></li>
+                    <li><a href="ProductPage.html" class="link" target="_blank">Shop</a></li>
+                    <li><a href="gallery.html" class="link" target="_blank">Gallery</a></li>
+                    <li><a href="quizPage.html" class="link" target="_blank">Quiz</a></li>
+                    <li><a href="AboutUs.html" class="link" target="_blank">About Us</a></li>
+                    <li><a href="ListingPage.html" class="link" target="_blank">Reviews</a></li>
+            </div>
+            <div class="nav-button">
+                <a href="login.html" target="_self"><button class="btn white-btn" id="loginBtn" >Sign In</button></a>
+                
+           </div>
+        </nav>
+
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="images/conceptVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!--Top Box Section-->
+        <div class="topbox">
+            <p class="big-txt">Create a website <br>without limits</p>
+            <p class="small-txt">Build and scale with confidence. From a <br> powerful website builder to advanced business <br> solutions-we have got you covered.</p>
+            <div class="btncontainer">
+                <button class="gsbtn">Get Started with AI</button>
+            </div>
+            <p class="xs-txt">Start for free. No credit card required</p>
+        </div>
+
+        <div class="background">
+            <div class="concept">
+                <p>
+                    <img src="images/Concept.gif" alt="gif">
+                </p>
+            </div>    
+        </div>
+
+        <!--Sec Box Section-->
+        <div class="secbox">
+            <p class="righttxt">One platform, <br> infinite possibilities</p>
+            <div class="three-para">
+                <p class="three">
+                    Change site themes by picking up the fonts <br> and colors that'll shape your <br> site's visual style
+                </p>
+                <p class="three">
+                    Shuffle layouts by playing with different <br> structures for your <br> site's pages
+                </p>
+                <p class="three">
+                    Update site content by revamping your <br> site description for dynamic <br> on- page text changes
+                </p>
+            </div>
+            <button class="gsbtn">Get Started with AI</button>
+        </div>
+
+        <div id="popupModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 class="summaryHead">Query Summary</h2>
+                <div id="summaryContent"></div>
+            </div>
+        </div>
+
+        <!--Query Form Section-->
+        <div id="query-form" class="query-form">
+            <form id="queryForm">
+                <fieldset>
+                    <div class="form-header">
+                        <img src="images/QueryForm.jfif" alt="Query Form Image" class="form-image">
+                        <h2>Have a Query?</h2>
+                        <p>Fill out the form below and we'll get back to you.</p>
+                    </div>
+                    <label for="fname">First Name: </label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Last Name: </label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="email">Email Address: </label>
+                    <input type="text" id="email" name="email"><br><br>
+                    <label for="queryTheme">Query Theme:</label><br>
+                    <select id="queryTheme" name="queryTheme">
+                        <option value="">Select a theme</option>
+                        <option value="customization and design">Customization and Design</option>
+                        <option value="technical support"> Technical Support</option>
+                        <option value="billing and payments">Billing and Payments</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+                    <label for="queryDetails">Query Details:</label><br>
+                    <textarea id="queryDetails" name="queryDetails" rows="4" cols="50"></textarea><br><br>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <div id="loading" class="loading">Loading...</div>
+                    <div id="confirmation" class="confirmation">Your query has been submitted.</div>
+                    <div id="additionalMessage" class="additionalMessage">Thank you for reaching out to us.</div>
+                </fieldset>
+            </form>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+              <img src="images/FooterLogo.png" alt="CreateME Logo" class="footer-logo">
+              <p>CreateME</p>
+              <p>Copyright © 2024 All rights reserved</p>
+              <p>Powered By <a href="https://www.CreateME.com">CreateME</a> - <a href="https://www.CreateME.com">Make your own website</a></p>
+            </div>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+            <nav class="footer-nav">
+              <a href="mainWebPage.html">Home</a>
+              <a href="ProductPage.html">Shop</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="quizPage.html">Quiz</a>
+              <a href="AboutUs.html">About Us</a>
+              <a href="ListingPage.html">Reviews</a>
+            </nav>
+            <a href="Shabna.html">Page Editor</a>
+          </footer>
+        </body>
+        </html>
